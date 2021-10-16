@@ -1,0 +1,57 @@
+{
+  "name": "drawing-tool",
+  "version": "0.1.0",
+  "private": true,
+  "description": "a drawing tool with ReactJS",
+  "scripts": {
+    "start": "umi dev",
+    "build": "umi build",
+    "postinstall": "umi generate tmp",
+    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "dependencies": {
+    "@types/rebass": "^4.0.8",
+    "@umijs/preset-react": "1.x",
+    "antd": "^4.16.6",
+    "deepcopy": "^2.1.0",
+    "fabric": "^4.5.1",
+    "hammerjs": "^2.0.8",
+    "lodash": "^4.17.21",
+    "mathjs": "^9.4.4",
+    "mobx": "^6.3.3",
+    "mobx-react": "^7.2.0",
+    "react-cropper": "^2.1.8",
+    "react-helmet-async": "^1.0.9",
+    "react-input-color": "^4.0.0",
+    "rebass": "^4.0.7",
+    "umi": "^3.4.25"
+  },
+  "devDependencies": {
+    "@types/fabric": "^4.5.0",
+    "@types/lodash": "^4.14.171",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@umijs/fabric": "^2.6.2",
+    "@umijs/test": "^3.4.25",
+    "cross-env": "^7.0.3",
+    "lint-staged": "^10.0.7",
+    "prettier": "^2.2.0",
+    "react": "17.x",
+    "react-dom": "17.x",
+    "typescript": "^4.1.2",
+    "yorkie": "^2.0.0"
+  }
+}

@@ -1,0 +1,54 @@
+.draw-container {
+  position: relative;
+  height: 100vh;
+  font-size: 14px;
+  line-height: 1.5;
+  background-color: #ffffff;
+}
+.draw {
+  &-title {
+    margin-bottom: 15px;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+  }
+  padding: 30px;
+  &-header {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #dddddd;
+  }
+  &-body {
+    display: flex;
+    &-sider {
+      display: flex;
+      flex-shrink: 0;
+      justify-content: center;
+      width: 60px;
+      min-height: 100px;
+      padding: 10px;
+      border: 1px solid #dddddd;
+      .ant-btn {
+        padding: 4px 10px;
+        margin: 0 auto;
+      }
+    }
+    &-board {
+      position: relative;
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      // min-height: 500px;
+      background-color: #f8f8f8;
+      canvas {
+        margin: 0 auto;
+      }
+      .draw-menu-icon {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 26px;
+      }
+    }
+  }
+}
