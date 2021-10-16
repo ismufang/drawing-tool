@@ -1,5 +1,7 @@
 import { defineConfig } from 'umi'
 
+const devRoutes = process.env.NODE_ENV !== 'production' ? [{ path: '/test', component: '@/pages/Test', exact: true }] : []
+
 export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
@@ -10,6 +12,6 @@ export default defineConfig({
   },
   routes: [
     { path: '/', component: '@/pages/index', exact: true },
-    { path: '/test', component: '@/pages/Test', exact: true },
+    ...devRoutes
   ],
 })
